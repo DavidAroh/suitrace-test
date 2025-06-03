@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animation for QR scanning */
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s infinite;
+}
+
+/* Custom styling */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900;
+}
+
+/* Form controls */
+input, select, textarea {
+  @apply rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500;
+}
+
+/* Transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Improved text legibility */
+.text-xs {
+  line-height: 1.25;
+}
+
+.text-sm {
+  line-height: 1.375;
+}
+
+.text-base {
+  line-height: 1.5;
+}
+
+.text-lg, .text-xl {
+  line-height: 1.375;
+}
+
+.text-2xl, .text-3xl, .text-4xl, .text-5xl {
+  line-height: 1.2;
+}
